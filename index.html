@@ -4,41 +4,110 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ghmash2 | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
     <header class="container header">
       <div class="hero">
-        <h1 id="name">Md Nurul Afsar Mahamud Bhuiyan</h1>
-        <p id="bio" class="muted">Loading profile…</p>
-        <div class="cta">
-          <a id="githubLink" class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn secondary" href="#projects">Projects</a>
+        <div class="heroText">
+          <div class="eyebrow">Portfolio</div>
+          <h1 id="name">Md Nurul Afsar Mahamud Bhuiyan</h1>
+          <p id="tagline" class="tagline">Software Developer</p>
+          <p id="bio" class="muted">Loading profile...</p>
+          <div class="cta">
+            <a id="githubLink" class="btn" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn secondary" href="#projects">Projects</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+          <div id="quickFacts" class="quickFacts">
+            <div class="fact">Based in <span id="locationInline">-</span></div>
+            <div class="fact">Building open-source tools</div>
+            <div class="fact">Available for collaborations</div>
+          </div>
         </div>
-      </div>
 
-      <div class="meta">
-        <div class="card">
-          <div class="cardTitle">Followers</div>
-          <div id="followers" class="cardValue">—</div>
-        </div>
-        <div class="card">
-          <div class="cardTitle">Public Repos</div>
-          <div id="publicRepos" class="cardValue">—</div>
-        </div>
-        <div class="card">
-          <div class="cardTitle">Location</div>
-          <div id="location" class="cardValue">—</div>
+        <div class="heroCard">
+          <div class="avatarWrap">
+            <img id="avatar" src="" alt="Profile avatar" />
+            <span class="statusDot" aria-hidden="true"></span>
+          </div>
+          <div class="heroStats">
+            <div class="card">
+              <div class="cardTitle">Followers</div>
+              <div id="followers" class="cardValue">-</div>
+            </div>
+            <div class="card">
+              <div class="cardTitle">Public Repos</div>
+              <div id="publicRepos" class="cardValue">-</div>
+            </div>
+            <div class="card">
+              <div class="cardTitle">Location</div>
+              <div id="location" class="cardValue">-</div>
+            </div>
+          </div>
+          <div class="heroLinks">
+            <a id="blogLink" class="linkChip" href="#" target="_blank" rel="noreferrer">Website</a>
+            <a id="twitterLink" class="linkChip" href="#" target="_blank" rel="noreferrer">Twitter</a>
+          </div>
         </div>
       </div>
     </header>
 
     <main class="container">
-      <section id="projects" class="section">
+      <section id="about" class="section reveal">
+        <div class="sectionHeader">
+          <h2>About</h2>
+          <span class="sectionTag">Story</span>
+        </div>
+        <div class="aboutGrid">
+          <div class="aboutCard">
+            <h3>Who I am</h3>
+            <p id="aboutText" class="muted">
+              I build reliable software with a focus on clean UI, performance, and collaboration.
+            </p>
+            <div class="aboutMeta">
+              <span id="company">Independent</span>
+              <span id="blogInline">Website</span>
+            </div>
+          </div>
+          <div class="aboutCard accent">
+            <h3>What I do</h3>
+            <ul class="focusList">
+              <li>Frontend engineering and UI systems</li>
+              <li>API integrations and automation</li>
+              <li>Open source and developer tooling</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section reveal">
+        <div class="sectionHeader">
+          <h2>Skills</h2>
+          <span class="sectionTag">Stack</span>
+        </div>
+        <div id="skillsList" class="skillsList"></div>
+      </section>
+
+      <section id="featured" class="section reveal">
+        <div class="sectionHeader">
+          <h2>Featured Projects</h2>
+          <span class="sectionTag">Highlights</span>
+        </div>
+        <div id="featuredGrid" class="grid featuredGrid"></div>
+      </section>
+
+      <section id="projects" class="section reveal">
         <div class="sectionHeader">
           <h2>Projects</h2>
           <div class="controls">
-            <input id="search" type="search" placeholder="Search repos…" />
+            <input id="search" type="search" placeholder="Search repositories..." />
             <select id="sort">
               <option value="stars">Sort: Stars</option>
               <option value="updated">Sort: Updated</option>
@@ -47,18 +116,27 @@
           </div>
         </div>
 
-        <div id="status" class="muted">Loading repositories…</div>
+        <div id="status" class="muted">Loading repositories...</div>
         <div id="repoGrid" class="grid"></div>
       </section>
 
-      <section class="section">
+      <section id="contact" class="section reveal">
         <h2>Contact</h2>
-        <p class="muted">mahmudpavel74@gmail.com</p>
+        <div class="contactCard">
+          <div>
+            <p class="muted">Want to build something together?</p>
+            <p class="contactEmail">mahmudpavel74@gmail.com</p>
+          </div>
+          <div class="contactLinks">
+            <a id="emailLink" class="btn" href="mailto:mahmudpavel74@gmail.com">Email Me</a>
+            <a id="githubContact" class="btn secondary" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="container footer muted">
-      <span id="year"></span> © ghmash2
+      <span id="year"></span> Ac ghmash2
     </footer>
 
     <script src="assets/app.js"></script>
